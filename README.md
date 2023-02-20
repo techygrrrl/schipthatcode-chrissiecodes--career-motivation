@@ -29,6 +29,12 @@ Install the dependencies:
 
 ### Running MongoDB locally
 
+Copy the example `.env` file:
+
+    cp .env.example .env
+
+The example file is checked into Git and is not sensitive. This is meant to work with MongoDB locally and not in production.
+
 Open Docker Desktop
 
     docker-compose up -d
