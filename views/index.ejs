@@ -93,11 +93,16 @@
         <h2>Average % Increase</h2>
         <% let sumChange = 0 %>
         <% for (let i=0; i < info.length; i++) {%>
-            <% let prev = parseInt(info[i].prevIncome, 10)%>
-            <% let tech = parseInt(info[i].techIncome, 10)%>
-            <% sumChange += ((tech - prev)/prev * 100) %>
-            <%}%>
-            <h3 class="text-success"><%= (sumChange/(info.length)).toFixed(2) %>%</h3>
+          <% let prev = parseInt(info[i].prevIncome, 10)%>
+          <% let tech = parseInt(info[i].techIncome, 10)%>
+          <% sumChange += ((tech - prev)/prev * 100) %>
+        <%}%>
+          
+        <% if (sumChange) { %>
+          <h3 class="text-success"><%= (sumChange/(info.length)).toFixed(2) %>%</h3>
+        <%} else { %>
+          <h3 class="text-success">No data yet</h3>
+        <%}%>
     </div>
     </section>
 
@@ -110,7 +115,7 @@
     <h2>Add a Success Stat</h2>
     <p>If you successfully transitioned from another career to tech, add your last role outside of tech and your first full-time role in tech. Please include income to the nearest 1000 or as close as you can remember. (If your previous work was part time please add "PT" after the role.)</p> 
     <p>These submissions are completely anonymous. All fields are required. Thank you for the encouragement!</p>
-    <form action="/addStat" method="POST">
+    <form action="/stats/add" method="POST">
         <input type="text" placeholder="Previous Title" name="prevTitle" required="true">
         <input type="text" placeholder="Previous Income USD" name="prevIncome" required="true">
         <input type="text" placeholder="Tech Title" name="techTitle" required="true">
