@@ -8,7 +8,7 @@ Bearing in mind that money isn't the only motivator, the second page features ca
 
 Anyone who has started their career outside of tech and transitioned into a career in tech is invited to contribute.
 
---Built with Node.js, Express, Boostrap and EJS.
+--Built with Node.js, Express, Bootstrap and EJS.
 
 Feel free to reach out if you have suggestions or other comments.
 
@@ -16,3 +16,25 @@ If you are currently considering a career in tech and don't know where to start,
 
 
 Collaborators: These folx helped with logic and code along the way, thanks a bunch! @Rascal_Two @Gratcan @Screwage @chrissiecodes
+
+
+## Development
+
+### Install dependencies
+
+Install the dependencies:
+
+    npm install
+
+
+### Running MongoDB locally
+
+Open Docker Desktop
+
+    docker-compose up -d
+
+You can also run the following script which has been added for convenience:
+
+    npm run mongo
+
+In the future, you can go into Docker Desktop and press the play button for the relevant container.
